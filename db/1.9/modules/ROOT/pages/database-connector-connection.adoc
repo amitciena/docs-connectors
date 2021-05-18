@@ -365,7 +365,7 @@ Install the library using a local file.
 * *Add Maven dependency* +
 Install a Maven dependency to add to the project.
 +
-. Set the connection *URL* to `jdbc:oracle:thin:${oracle.user}/${oracle.password}@(DESCRIPTION=(ENABLE=BROKEN)(FAILOVER=ON)(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=${oracle.host1})(PORT=${oracle.port}))(ADDRESS=(PROTOCOL=TCP)(HOST=${oracle.host2})(PORT=${oracle.port}))(CONNECT_DATA=(SERVICE_NAME=${oracle.service})))`.
+. Set the connection *URL* to `jdbc:oracle:thin:${oracle.user}/${oracle.password}@(DESCRIPTION=(ENABLE=BROKEN)(FAILOVER=ON)(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=${oracle.host1})(PORT=${oracle.port}))(ADDRESS=(PROTOCOL=TCP)(HOST=${oracle.host2})(PORT=${oracle.port})))(CONNECT_DATA=(SERVICE_NAME=${oracle.service})))`.
 . Set *Driver class name* to `oracle.jdbc.driver.OracleDriver`.
 . Click *Test Connection* to validate the connection with the database.
 . Click *OK*.
@@ -381,7 +381,7 @@ In the XML editor, the configuration looks like this:
 ----
 <db:config name="Database_Config">
     <db:generic-connection driverClassName="oracle.jdbc.driver.OracleDriver"
-    url="jdbc:oracle:thin:${oracle.user}/${oracle.password}@(DESCRIPTION=(ENABLE=BROKEN)(FAILOVER=ON)(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=${oracle.host1})(PORT=${oracle.port}))(ADDRESS=(PROTOCOL=TCP)(HOST=${oracle.host2})(PORT=${oracle.port}))(CONNECT_DATA=(SERVICE_NAME=${oracle.service})))` and *Driver class name* to `oracle.jdbc.driver.OracleDriver"/>
+    url="jdbc:oracle:thin:${oracle.user}/${oracle.password}@(DESCRIPTION=(ENABLE=BROKEN)(FAILOVER=ON)(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=${oracle.host1})(PORT=${oracle.port}))(ADDRESS=(PROTOCOL=TCP)(HOST=${oracle.host2})(PORT=${oracle.port})))(CONNECT_DATA=(SERVICE_NAME=${oracle.service})))` and *Driver class name* to `oracle.jdbc.driver.OracleDriver"/>
 </db:config>
 ----
 
